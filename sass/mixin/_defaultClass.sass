@@ -1,0 +1,259 @@
+@charset "UTF-8"
+
+html 
+	font-size: 62.5%
+
+body
+	font-size: 14px
+	font-size: 1.4rem
+	font-family: "微軟正黑體","Microsoft JhengHei", "STHeiti Light", "STHeiti", Arial, sans-serif
+
+@for $i from 1 through 40
+	.f#{$i}
+		font-size: #{$i}px
+		font-size: $i/10+rem
+
+@for $i from 1 through 20
+	.zi_#{$i}
+		z-index: #{$i}	
+
+.videoBg 
+	position: absolute
+	right: 0
+	bottom: 0
+	z-index: -1              
+	min-width: 100%          
+	min-height: 100%
+	width: auto              
+	height: auto
+	top: 50%                 
+	left: 50%                
+	+translate(-50%,-50%)       
+	// background: url(bkg.jpg) no-repeat     
+	background-size: cover
+
+.ta_c
+	text-align: center
+
+.fadeIn
+	+animate(fadeIn, 0.6s)
+
+.hide 
+	display: none!important 
+
+.clear 
+	clear: both
+	
+ul.discList  
+	list-style-type: disc
+
+.blackBg
+	background-image: url("../images/g/bBg.png")
+
+div 
+	+box-sizing(border-box)
+input,textarea
+	+box-sizing(border-box)
+	
+input[type=text],input[type=password]
+	padding-left: 10px
+
+textarea
+	padding-left: 10px
+	padding-top: 10px
+.shadowDiv 
+	+box-shadow(2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4))
+.shadowTxt 
+	+text-shadow(3px 3px 15px #000)
+.boldTxt
+	font-weight: bold
+
+.italicTxt
+	font-style: italic
+
+.fl 
+	float: left
+.fr
+	float: right
+
+.roundDiv
+	+border-radius(5px)
+
+.centerDiv 
+	margin-left: auto
+	margin-right: auto
+
+a 
+	text-decoration: none
+	color: inherit
+	&:hover 
+		text-decoration: underline
+		color: inherit
+
+/*  special Class*/
+.pe_n 
+	pointer-events: none
+
+
+/*	btns style */
+.alphaBtn
+	+alphaBtn
+
+.blackHoverBtn
+	+blackHoverBtn
+
+
+
+
+
+/*  margin & padding  */
+.mt_ss
+	margin-top: 5px
+.ml_ss
+	margin-left: 5px
+.mr_ss
+	margin-right: 5px
+.mb_ss
+	margin-bottom: 5px
+
+.mt_s
+	margin-top: $margin_small
+.ml_s
+	margin-left: $margin_small
+.mr_s
+	margin-right: $margin_small
+.mb_s
+	margin-bottom: $margin_small
+
+.mt_b
+	margin-top: $margin_big
+.ml_b
+	margin-left: $margin_big
+.mr_b
+	margin-right: $margin_big
+.mb_b
+	margin-bottom: $margin_big
+
+.dotLine
+	width: 100%
+	height: 0
+	border-bottom: 1px dotted black
+
+
+
+.bTxt 
+	color: #000
+.wTxt 
+	color: #fff
+.gTxt
+	color: $grayTxtColor
+
+.fullPage
+	position: relative
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	
+
+.popPage
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+
+.coverBg
+	+coverBg
+
+.containBg 
+	+containBg
+
+
+.whiteUnderLine
+	border-bottom: 2px solid white
+
+.tpBox
+	display: flex
+	+phone
+		flex-wrap: wrap
+	.txt 
+		padding: 25px
+	.pic 
+		flex-grow: 0 
+		flex-shrink: 0.1
+		width: 45%
+		+phone 
+			width: 100%
+	
+.mr-30
+	margin-right: 30px	
+.mt_70
+	margin-top: 70px
+.mb_70
+	margin-bottom: 70px		
+
+.lineTxt
+	position: relative
+
+	&:after 
+		content: ''
+		width: 100%
+		height: 2px
+		background-color: #ffe244
+		position: absolute
+		bottom: 0
+		left: 0
+	.txt
+		display: inline-block
+		padding-right: 15px
+		border-bottom: 2px solid #e33c12
+		position: relative
+		z-index: 2
+		padding-bottom: 10px
+
+.footer
+	background-color: #fff
+	padding: 25px 0
+	position: relative
+	z-index: 5
+	.dfBox
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 15px
+		+phone 
+			display: block
+		.logo-cn
+			+bg('logo_ch.png')
+			+phone 
+				+bg('m_logo_ch.png')
+	.contectBox
+		+phone
+			margin-bottom: 50px
+
+		.txtBox
+			display: inline-block
+			+phone 
+				display: block
+				font-size: 20px
+				margin-top: 10px
+			.redTxt
+				color: #cf000a
+				padding-right: 10px
+				border-right: 1px solid black
+				margin-right: 10px
+.bigEn
+	font-family: 'Passion One', cursive
+	&.title
+		font-size: 6rem	
+		margin-bottom: -15px
+.yTxt
+	color: #fdd000
+.swiper-pagination-bullet-active
+	background: #ffe244
+
+.rTxt
+	color: #cf000a
+.grayTxt
+	color: #666666
