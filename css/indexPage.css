@@ -3444,6 +3444,14 @@ h2 {
   left: 0;
   z-index: 50;
   background-color: #d50011;
+  margin-left: 100vw;
+  -moz-transition: all, 0.6s;
+  -o-transition: all, 0.6s;
+  -webkit-transition: all, 0.6s;
+  transition: all, 0.6s;
+}
+#m_menuPop.open {
+  margin-left: 0;
 }
 #m_menuPop .clozBtn {
   width: 60px;
@@ -3507,6 +3515,19 @@ h2 {
   width: 100%;
   height: 100%;
 }
+.index .swiper-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.index .swiper-container .swiper-button-prev {
+  color: white;
+}
 @media screen and (max-width: 768px) {
   .index .swiper-container {
     position: absolute;
@@ -3515,20 +3536,20 @@ h2 {
   }
 }
 
-.banner {
+.bannerWrap {
+  display: flex;
+}
+.bannerWrap .banner {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
-  width: 100%;
+  width: 50%;
   display: block;
   height: 200px;
 }
-.banner.redBg {
-  background-image: url("../images/rBg.png");
-}
-.banner .bannerPic {
+.bannerWrap .banner .bannerPic {
   height: 100%;
   width: 100%;
   max-width: 950px;
@@ -3538,25 +3559,28 @@ h2 {
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url("../images/banner01.png");
   margin: 0 auto;
   background-position: 50% 100%;
 }
+.bannerWrap .banner.banner1 {
+  background-image: url("../images/rBg.png");
+}
+.bannerWrap .banner.banner1 .bannerPic {
+  background-image: url("../images/m_banner01.png");
+}
+.bannerWrap .banner.banner2 {
+  background-image: url("../images/lBg.png");
+}
+.bannerWrap .banner.banner2 .bannerPic {
+  background-image: url("../images/m_banner02.png");
+}
 @media screen and (max-width: 768px) {
-  .banner .bannerPic {
-    background-image: url("../images/m_banner01.png");
+  .bannerWrap {
+    flex-wrap: wrap;
   }
-}
-
-.rightIn-enter-active, .rightIn-leave-active {
-  -moz-transition: all, 0.6s;
-  -o-transition: all, 0.6s;
-  -webkit-transition: all, 0.6s;
-  transition: all, 0.6s;
-}
-
-.rightIn-enter, .rightIn-leave-to {
-  margin-left: 100vw;
+  .bannerWrap .banner {
+    width: 100%;
+  }
 }
 
 .padShow {

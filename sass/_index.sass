@@ -149,6 +149,10 @@ h2
 	left: 0
 	z-index: 50
 	background-color: #d50011
+	margin-left: 100vw
+	+dTime(.6s)
+	&.open
+		margin-left: 0
 	.clozBtn
 		+bg('m_cloz.png')
 		position: absolute
@@ -184,37 +188,53 @@ h2
 		+aspect-ratio(560,315)
 		position: relative
 	.swiper-container
-		
 		background-color: black
 		width: 100%
 		height: 100%
+		a 
+			display: block
+			width: 100%
+			height: 100%
+			+coverBg
+		.swiper-button-prev
+			color: white
 		+phone 
 			position: absolute
 			top: 0
 			left: 0
 		
 			
+.bannerWrap
+	display: flex
+	
+	.banner
+		+coverBg
+		width: 50%
+		display: block
+		height: 200px
+		
 
-.banner
-	+coverBg
-	width: 100%
-	display: block
-	height: 200px
-	&.redBg
-		+bgi('rBg.png')
-	.bannerPic
-		height: 100%
-		width: 100%
-		max-width: 950px
-		+containBg
-		+bgi('banner01.png')
-		margin: 0 auto
-		background-position: 50% 100%
-		+phone
-			+bgi('m_banner01.png') 
+		.bannerPic
+			height: 100%
+			width: 100%
+			max-width: 950px
+			+containBg
+			
+			margin: 0 auto
+			background-position: 50% 100%
+			
 
+		&.banner1
+			+bgi('rBg.png')
+			.bannerPic
+				+bgi('m_banner01.png') 
+				
+		&.banner2
+			+bgi('lBg.png')
+			.bannerPic
+				+bgi('m_banner02.png') 
+	+phone 
+		flex-wrap: wrap
+		.banner
+			width: 100%	
 
-.rightIn-enter-active, .rightIn-leave-active 
-	+dTime(.6s)
-.rightIn-enter, .rightIn-leave-to 
-	margin-left: 100vw
